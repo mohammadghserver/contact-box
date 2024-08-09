@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <Link rel="stylesheet"  href="file1.css" >
+    <Link rel="stylesheet"  href="../css/all.css" >
+    <Link rel="stylesheet"  href="../css/bootstrap.css" >
+    <script>
+     function envelopeDivClick(){
+       var dv = document.getElementById("desSpan").getAttribute("data-desc");
+
+       if(dv==="false"){
+        document.getElementById("desSpan").style.display="block";
+        document.getElementById("desSpan").setAttribute("data-desc","true"); 
+        document.getElementById("desSpan2").style.display="none";
+        document.getElementById("desSpan2").setAttribute("data-desc","false"); 
+        document.getElementById("desSpan3").style.display="none";
+        document.getElementById("desSpan3").setAttribute("data-desc","false"); 
+        document.getElementById("spaceDiv").style.display="block";
+        document.getElementById("spaceDiv2").style.display="none";
+
+
+       }
+
+     }
+     function mobileDivClick(){
+      var dv = document.getElementById("desSpan2").getAttribute("data-desc");
+
+       if(dv==="false"){
+        document.getElementById("desSpan2").style.display="block";
+        document.getElementById("desSpan2").setAttribute("data-desc","true");
+        document.getElementById("desSpan").style.display="none";
+        document.getElementById("desSpan").setAttribute("data-desc","false");
+        document.getElementById("desSpan3").style.display="none";
+        document.getElementById("desSpan3").setAttribute("data-desc","false");
+        document.getElementById("spaceDiv").style.display="none";
+        document.getElementById("spaceDiv2").style.display="block";
+       }
+
+      }
+     function locationDivClick(){
+      var dv = document.getElementById("desSpan3").getAttribute("data-desc");
+
+       if(dv==="false"){
+        document.getElementById("desSpan3").style.display="block";
+        document.getElementById("desSpan3").setAttribute("data-desc","true");  
+        document.getElementById("desSpan2").style.display="none";
+        document.getElementById("desSpan2").setAttribute("data-desc","false"); 
+        document.getElementById("desSpan").style.display="none";
+        document.getElementById("desSpan").setAttribute("data-desc","false");
+        document.getElementById("spaceDiv").style.display="none";
+        document.getElementById("spaceDiv2").style.display="none";
+       }
+
+     }
+    </script>
+</head> 
+<body>
+    <nav>
+        <div class="pad">
+          <div class="icon-box" id="box" onclick="envelopeDivClick()" >
+            <span class="fa-regular fa-envelope envelopeIcon" style="color: #ffffff;"></span>
+            <span class="description-span" id="desSpan" data-desc="false">
+              <p class="email">hossein.hp.1394@gmail.com</p> 
+            </span> 
+          </div> 
+          <div class="space-div" id="spaceDiv"></div>
+          <div class="icon-box" id="box" onclick="mobileDivClick()" >
+            <span class="fa-solid fa-mobile mobileIcon" style="color: #ffffff;"></span>
+            <span class="description-span" id="desSpan2" data-desc="false">
+               <p class="mobile-number">989013795940+</p>
+            </span>
+          </div> 
+          <div class="space-div2" id="spaceDiv2"></div>
+          <div class="icon-box" id="box" onclick="locationDivClick()" >
+            <span class="fa-regular fa-location-dot locationIcon" style="color: #ffffff;"></span>
+            <span class="description-span" id="desSpan3" data-desc="false">
+               <p class="address">Mashhad.IR</p>
+            </span>
+          </div> 
+        </div>
+    </nav>
+</body>
+</html>
